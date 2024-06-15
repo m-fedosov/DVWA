@@ -41,6 +41,7 @@ This file is available in multiple languages:
 - Arabic: [العربية](README.ar.md)
 - Chinese: [简体中文](README.zh.md)
 - French: [Français](README.fr.md)
+- Korean: [한국어](README.ko.md)
 - Persian: [فارسی](README.fa.md)
 - Portuguese: [Português](README.pt.md)
 - Spanish: [Español](README.es.md)
@@ -80,6 +81,15 @@ An automated configuration script for DVWA on Debian-based machines, including K
 
 #### Installation Steps
 
+##### One-Liner
+
+This will download an install script written by [@IamCarron](https://github.com/IamCarron) and run it automatically. This would not be included here if we did not trust the author and the script as it was when we reviewed it, but there is always the chance of someone going rogue, and so if you don't feel safe running someone else's code without reviewing it yourself, follow the manual process and you can review it once downloaded.
+
+```bash
+sudo bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh)"
+```
+
+##### Manually Running the Script
 1. **Download the script:**
    ```bash
    wget https://raw.githubusercontent.com/IamCarron/DVWA-Script/main/Install-DVWA.sh
@@ -170,6 +180,14 @@ Running `docker compose up -d` should trigger Docker to build an image from loca
 
 See also: [`pull_policy`](https://github.com/compose-spec/compose-spec/blob/master/05-services.md#pull_policy
 ).
+
+### PHP Versions
+
+Ideally you should be using the latest stable version of PHP as that is the version that this app will be developed and tested on.
+
+Support will not be given for anyone trying to use PHP 5.x.
+
+Versions less than 7.3 have known issues that will cause problems, most of the app will work, but random things may not. Unless you have a very good reason for using such an old version, support will not be given.
 
 ### Linux Packages
 
